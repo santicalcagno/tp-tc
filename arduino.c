@@ -1,3 +1,5 @@
+ #include <EEPROM.h>
+
 const int exteriorButtonPins[] = {1,2,3,4,5,6};
 const int interiorButtonPins[] = {1,2,3,4,5,6};
 
@@ -27,9 +29,11 @@ void setup () {
     Serial.begin (9600);
     setupInteriorButtons ();
     setupExteriorButtons ();
+    returnToGround();
 }
 
 void loop () {
+  
     if (!halt) {
         if(hasReachedFloor()) {
         	floorReachedEvent(); 
@@ -71,6 +75,16 @@ void startElevator () {
 
 void changeDirection () {
       currentDirection = !currentDirection;
+}
+
+void returnToGround(){
+  if (!EEPROM.read(1)) {
+    for (int i = 0; i < EEPROM.read(1); ++i)
+    {
+      motorDown();
+      delay(1000);
+    }
+  }
 }
 
 /**
@@ -190,21 +204,23 @@ boolean hasReachedFloor() {
     Ensures that the floor is marked as visited by deactivating its floor visited commands
     Returns false if the elevator is at the top or bottomFloor
 */
-void floorReachedEvent() {
-    if (currentDirection) {
-          if (currentFloor < MAX_FLOOR_INDEX) 
-              currentFloor++;
-          else {
+    void floorReachedEvent() {
+      if (currentDirection) {
+        if (currentFloor < MAX_FLOOR_INDEX) {
+          currentFloor++;
+          EEPROM.write(1, currentFloor);
+        } else {
               //llegue a planta alta
-          }
+        }
       } else {
-          if (currentFloor > MIN_FLOOR_INDEX)
-              currentFloor--;
-          else {
+        if (currentFloor > MIN_FLOOR_INDEX) {
+          currentFloor--;
+          EEPROM.write(1, currentFloor);
+        } else {
               //legue a planta baja
-          }
-    }  
-}
+        }
+      }
+    }
 
 void markFloorAsVisited (int floorIndex) {
     interiorSelected[floorIndex] = false;

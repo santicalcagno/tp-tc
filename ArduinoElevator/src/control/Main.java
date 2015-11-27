@@ -18,7 +18,7 @@ public class Main {
 		try
 		{
 			while (true) {
-				String line = readLine(in);
+				String line = readLine(in).trim();
 				switch (line) {
 				case "MotorUp":
 					System.out.println("arriba");

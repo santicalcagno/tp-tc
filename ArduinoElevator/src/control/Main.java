@@ -8,7 +8,7 @@ import javax.swing.ImageIcon;
 import com.fazecast.jSerialComm.SerialPort;
 
 import uielevador.elevadorFrame;
-import uielevador.ventana;
+
 
 public class Main {
 	
@@ -32,7 +32,6 @@ public class Main {
 				case "MotorUp":
 					System.out.println("arriba");
 					el.subir();
-					
 					break;
 				case "MotorDown":
 					System.out.println("abajo");

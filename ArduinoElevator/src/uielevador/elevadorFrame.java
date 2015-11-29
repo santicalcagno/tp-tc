@@ -8,6 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+
 import javax.swing.JLabel;
 import java.awt.GridLayout;
 import javax.swing.BoxLayout;
@@ -19,10 +22,24 @@ import javax.swing.SwingConstants;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.LineBorder;
+import javax.swing.JLayeredPane;
 
 public class elevadorFrame extends JFrame {
 
 	private JPanel contentPane;
+	private JLabel lblNewLabel_3 = new JLabel("");
+
+	
+
+	
+
+	public JLabel getLblNewLabel_3() {
+		return lblNewLabel_3;
+	}
+
+	public void setLblNewLabel_3(JLabel lblNewLabel_3) {
+		this.lblNewLabel_3 = lblNewLabel_3;
+	}
 
 	/**
 	 * Launch the application.
@@ -53,7 +70,7 @@ public class elevadorFrame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(0, 3, 0, 0));
 		setSize(550, 700);	
-		
+		setVisible(true);
 		JPanel panel = new JPanel();
 		contentPane.add(panel);
 		panel.setLayout(new GridLayout(6, 0, 0, 0));
@@ -72,9 +89,6 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_46 = new JPanel();
 		panel_4.add(panel_46);
 		
-		JPanel panel_47 = new JPanel();
-		panel_46.add(panel_47);
-		
 		JPanel panel_6 = new JPanel();
 		panel_6.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel.add(panel_6);
@@ -88,9 +102,6 @@ public class elevadorFrame extends JFrame {
 		
 		JPanel panel_49 = new JPanel();
 		panel_6.add(panel_49);
-		
-		JPanel panel_50 = new JPanel();
-		panel_49.add(panel_50);
 		
 		JPanel panel_8 = new JPanel();
 		panel_8.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -106,9 +117,6 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_52 = new JPanel();
 		panel_8.add(panel_52);
 		
-		JPanel panel_53 = new JPanel();
-		panel_52.add(panel_53);
-		
 		JPanel panel_10 = new JPanel();
 		panel_10.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel.add(panel_10);
@@ -122,9 +130,6 @@ public class elevadorFrame extends JFrame {
 		
 		JPanel panel_55 = new JPanel();
 		panel_10.add(panel_55);
-		
-		JPanel panel_56 = new JPanel();
-		panel_55.add(panel_56);
 		
 		JPanel panel_12 = new JPanel();
 		panel_12.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -140,9 +145,6 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_58 = new JPanel();
 		panel_12.add(panel_58);
 		
-		JPanel panel_59 = new JPanel();
-		panel_58.add(panel_59);
-		
 		JPanel panel_14 = new JPanel();
 		panel_14.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel.add(panel_14);
@@ -156,9 +158,6 @@ public class elevadorFrame extends JFrame {
 		
 		JPanel panel_61 = new JPanel();
 		panel_14.add(panel_61);
-		
-		JPanel panel_62 = new JPanel();
-		panel_61.add(panel_62);
 		
 		JPanel panel_1 = new JPanel();
 		contentPane.add(panel_1);
@@ -232,6 +231,9 @@ public class elevadorFrame extends JFrame {
 		panel_32.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_11.add(panel_32);
 		
+		
+		
+		
 		JPanel panel_33 = new JPanel();
 		panel_11.add(panel_33);
 		
@@ -259,30 +261,81 @@ public class elevadorFrame extends JFrame {
 		
 		JPanel panel_19 = new JPanel();
 		panel_18.add(panel_19);
-		panel_19.setLayout(new GridLayout(0, 2, 0, 0));
-		imagen boton1 = new imagen();
-		panel_19.add(boton1);
-		imagen boton2 = new imagen();
-		panel_19.add(boton2);		
+		panel_19.setLayout(new GridLayout(2, 2, 0, 0));
+		
+		JPanel panel_21 = new JPanel();
+		panel_19.add(panel_21);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_21.add(lblNewLabel_4);
+		
+		JPanel panel_39 = new JPanel();
+		panel_19.add(panel_39);
+		
+		JPanel panel_40 = new JPanel();
+		panel_19.add(panel_40);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_40.add(label);
+		
+		JPanel panel_41 = new JPanel();
+		panel_19.add(panel_41);
+		
 		
 		JPanel panel_37 = new JPanel();
 		panel_18.add(panel_37);
-		panel_37.setLayout(new GridLayout(0, 2, 0, 0));
+		panel_37.setLayout(new GridLayout(2, 2, 0, 0));
+		
+		JPanel panel_42 = new JPanel();
+		panel_37.add(panel_42);
+		
+		JLabel label_1 = new JLabel("");
+		label_1.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_42.add(label_1);
+		
+		JPanel panel_43 = new JPanel();
+		panel_37.add(panel_43);
+		
+		JPanel panel_44 = new JPanel();
+		panel_37.add(panel_44);
+		
+		JPanel panel_47 = new JPanel();
+		panel_37.add(panel_47);
 		
 		JPanel panel_38 = new JPanel();
 		panel_18.add(panel_38);
-		panel_38.setLayout(new GridLayout(0, 2, 0, 0));
+		panel_38.setLayout(new GridLayout(2, 2, 0, 0));
+		
+		JPanel panel_50 = new JPanel();
+		panel_38.add(panel_50);
+		
+		JPanel panel_53 = new JPanel();
+		panel_38.add(panel_53);
+		
+		JPanel panel_56 = new JPanel();
+		panel_38.add(panel_56);
+		
+		JPanel panel_59 = new JPanel();
+		panel_38.add(panel_59);
 		
 		JPanel panel_20 = new JPanel();
 		panel_2.add(panel_20);
 		
-		JPanel panel_21 = new JPanel();
-		panel_21.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		FlowLayout flowLayout = (FlowLayout) panel_21.getLayout();
-		flowLayout.setVgap(75);
-		flowLayout.setHgap(50);
-		panel_20.add(panel_21);
+		
+		lblNewLabel_3.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/cerrado.png")));
+		panel_20.add(lblNewLabel_3);
 		
 	}
+
+	public JLabel getLabel_1() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+	
 
 }

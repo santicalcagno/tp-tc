@@ -3,8 +3,11 @@ package control;
 import java.io.IOException;
 import java.io.InputStream;
 
+import javax.swing.ImageIcon;
+
 import com.fazecast.jSerialComm.SerialPort;
 
+import uielevador.elevadorFrame;
 import uielevador.ventana;
 
 public class Main {
@@ -16,7 +19,7 @@ public class Main {
 		comPort.openPort();
 		comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 100, 0);
 		InputStream in = comPort.getInputStream();
-		ventana uielevador = new ventana("TPI TC");
+		elevadorFrame uielevador = new elevadorFrame();
 		elevador el = new elevador(0,"cerrado");
 		
 		
@@ -29,22 +32,22 @@ public class Main {
 				case "MotorUp":
 					System.out.println("arriba");
 					el.subir();
-					uielevador.pisoLabel.setText(String.valueOf(el.getPisoActual()));
+					
 					break;
 				case "MotorDown":
 					System.out.println("abajo");
 					el.bajar();
-					uielevador.pisoLabel.setText(String.valueOf(el.getPisoActual()));
+					
 					break;
 				case "DoorOpen":
 					System.out.println("abrir puerta");
 					el.abrirPuerta();
-					uielevador.estadoElevador.setText(el.getEstadoElevador());
+					uielevador.getLblNewLabel_3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/abierto.png")));
 					break;
 				case "DoorClose":
 					System.out.println("cerrar puerta");
 					el.cerrarPuerta();
-					uielevador.estadoElevador.setText(el.getEstadoElevador());
+					uielevador.getLblNewLabel_3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/cerrado.png")));
 					break;
 				default:
 					break;

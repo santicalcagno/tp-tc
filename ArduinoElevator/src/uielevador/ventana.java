@@ -248,7 +248,7 @@ public class ventana {
 		elevador.add(pisoLabel);
 		elevador.add(estadoElevador);
 		
-		elevador.setSize(300, 300);
+		elevador.setSize(300, 700);
 		elevador.setLocation(250, 0);
 		elevador.setVisible(true);
 		

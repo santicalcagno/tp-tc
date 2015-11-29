@@ -46,6 +46,42 @@ public class Main {
 					el.cerrarPuerta();
 					uielevador.estadoElevador.setText(el.getEstadoElevador());
 					break;
+				case "e0":
+					break;
+				case "e1":
+					break;
+				case "e2":
+					break;
+				case "e3":
+					break;
+				case "e4":
+					break;
+				case "e5":
+					break;
+				case "i0":
+					break;
+				case "i1":
+					break;
+				case "i2":
+					break;
+				case "i3":
+					break;
+				case "i4":
+					break;
+				case "v0":
+					break;
+				case "v1":
+					break;
+				case "v2":
+					break;
+				case "v3":
+					break;
+				case "v4":
+					break;
+				case "v5":
+					break;
+					
+					
 				default:
 					break;
 				};

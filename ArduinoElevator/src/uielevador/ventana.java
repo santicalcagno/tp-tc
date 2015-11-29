@@ -19,7 +19,8 @@ public class ventana {
 	
 	JFrame elevador = new JFrame();
 	public JLabel estadoElevador = new JLabel("cerrado");
-	public JLabel pisoLabel = new JLabel("0");
+	public JLabel pisoLabel = new JLabel("Piso: 0");
+	
 	Graphics cuadradoElevador = new Graphics() {
 		
 		@Override
@@ -245,10 +246,11 @@ public class ventana {
 				
 		Container contenedorPrincipal = elevador.getContentPane();
 		contenedorPrincipal.setLayout(new GridLayout(1, 1));
+		pisoLabel.setFont(new Font("Arial", Font.PLAIN, 25));
 		elevador.add(pisoLabel);
 		elevador.add(estadoElevador);
 		
-		elevador.setSize(300, 700);
+		elevador.setSize(500, 300);
 		elevador.setLocation(250, 0);
 		elevador.setVisible(true);
 		

@@ -273,6 +273,9 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_39 = new JPanel();
 		panel_19.add(panel_39);
 		
+		JLabel lblPiso_2 = new JLabel("PISO 1");
+		panel_39.add(lblPiso_2);
+		
 		JPanel panel_40 = new JPanel();
 		panel_19.add(panel_40);
 		
@@ -282,6 +285,9 @@ public class elevadorFrame extends JFrame {
 		
 		JPanel panel_41 = new JPanel();
 		panel_19.add(panel_41);
+		
+		JLabel lblPiso_3 = new JLabel("PISO 2");
+		panel_41.add(lblPiso_3);
 		
 		
 		JPanel panel_37 = new JPanel();
@@ -298,11 +304,21 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_43 = new JPanel();
 		panel_37.add(panel_43);
 		
+		JLabel lblPiso_4 = new JLabel("PISO 3");
+		panel_43.add(lblPiso_4);
+		
 		JPanel panel_44 = new JPanel();
 		panel_37.add(panel_44);
 		
+		JLabel label_2 = new JLabel("");
+		label_2.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_44.add(label_2);
+		
 		JPanel panel_47 = new JPanel();
 		panel_37.add(panel_47);
+		
+		JLabel lblPiso_5 = new JLabel("PISO 4");
+		panel_47.add(lblPiso_5);
 		
 		JPanel panel_38 = new JPanel();
 		panel_18.add(panel_38);
@@ -311,14 +327,28 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_50 = new JPanel();
 		panel_38.add(panel_50);
 		
+		JLabel label_3 = new JLabel("");
+		label_3.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_50.add(label_3);
+		
 		JPanel panel_53 = new JPanel();
 		panel_38.add(panel_53);
+		
+		JLabel lblPiso_6 = new JLabel("PISO 5");
+		panel_53.add(lblPiso_6);
 		
 		JPanel panel_56 = new JPanel();
 		panel_38.add(panel_56);
 		
+		JLabel label_4 = new JLabel("");
+		label_4.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_56.add(label_4);
+		
 		JPanel panel_59 = new JPanel();
 		panel_38.add(panel_59);
+		
+		JLabel lblPiso_7 = new JLabel("PLANTA BAJA");
+		panel_59.add(lblPiso_7);
 		
 		JPanel panel_20 = new JPanel();
 		panel_2.add(panel_20);

@@ -45,6 +45,7 @@ public class Main {
 					System.out.println("cerrar puerta");
 					el.cerrarPuerta();
 					uielevador.estadoElevador.setText(el.getEstadoElevador());
+					break;
 				default:
 					break;
 				};

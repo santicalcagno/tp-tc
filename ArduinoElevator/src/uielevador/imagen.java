@@ -9,8 +9,9 @@ public class imagen extends javax.swing.JPanel {
 	
 	private String imagen;
 	
-	public imagen(){
+	public imagen(String imagen){
 		this.setSize(this.getSize());
+		this.setImagen(imagen);
 	}
 	
 	public void paint(Graphics grafico){

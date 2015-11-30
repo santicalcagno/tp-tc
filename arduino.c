@@ -39,7 +39,7 @@ void loop () {
       if(hasReachedFloor()) {
         floorReachedEvent(); 
         if (shouldStopAtFloor(currentFloor)) {
-            Serial.println("debe parar aca");
+            //Serial.println("debe parar aca");
             stopElevator();
             markFloorAsVisited(currentFloor);
             doorOpen();   
@@ -69,11 +69,11 @@ void stopElevator() {
 }
 
 void startElevator () {
-  Serial.println("Start Elevator");
+  //Serial.println("Start Elevator");
   halt = false;
   currentDirection ? motorUp() : motorDown();
   timeAtStarted = millis();
-  Serial.println(timeAtStarted);
+  //Serial.println(timeAtStarted);
 }
 
 void changeDirection () {
@@ -83,6 +83,7 @@ void changeDirection () {
 void returnToGround(){
   currentFloor = EEPROM.read(1);
   if (currentFloor != 0) {
+    doorClose();
     for (int i = 0; i < EEPROM.read(1); ++i)
     {
       motorDown();
@@ -97,10 +98,10 @@ void returnToGround(){
     Hace que el ascensor se mueva al siguiente piso que tiene que visitar
 */
 void executeTask(){
-  Serial.println("executeTask");
+  //Serial.println("executeTask");
   if (!exteriorSelected[currentFloor]) {     
     if (taskInDirection(currentDirection)) {
-      Serial.println("quedan pisos por visitar en esta dirección");
+      //Serial.println("quedan pisos por visitar en esta dirección");
       startElevator();
     } else if (taskInDirection (!currentDirection)) {
       //Si hay tareas en sentido contrario, ir para allá
@@ -108,7 +109,7 @@ void executeTask(){
       startElevator();
     }
   } else {
-    Serial.println("viene por dooropen");
+    //Serial.println("viene por dooropen");
     doorOpen();
   }
 }
@@ -157,7 +158,7 @@ void doorClose() {
   }        
 }
 
-//Returns true if a button press is detected
+//Devuelve true si se presiona un boton
 boolean buttonPressDetected () {
   return (readExteriorButtonStates ()
     || readInteriorButtonStates ());
@@ -202,37 +203,30 @@ boolean readInteriorButtonStates() {
 }
 
 /**
-  Returns true if an interior button selection for the floor at index specified was made or an 
-  exterior button that is in the same direction as the current floors direction has been selected.
+  Devuelve true si tiene que parar en el piso,
+  o sea, si se apreto un boton de adentro o afuera
 */
 boolean shouldStopAtFloor (int floorIndex) {
-  if (interiorSelected[floorIndex] || exteriorSelected[floorIndex]) {
-    Serial.print("debe parar en ");
-    Serial.println(floorIndex);
-  }
   return interiorSelected[floorIndex] || exteriorSelected[floorIndex];
 }
 
 boolean hasReachedFloor() {
   if (millis() - timeAtStarted > TIME_BETWEEN_FLOORS) {
-    Serial.println("LLego al siguiente piso");
     return true;
   }
   return false;
 }
 
 /**
-    Increments or decrements floorReached variable depending on direction of the elevator
-    Ensures that the floor is marked as visited by deactivating its floor visited commands
-    Returns false if the elevator is at the top or bottomFloor
+    Aumenta o decrementa currentFloor en función de la trayectoria
 */
 void floorReachedEvent() {
-  Serial.println("floorReachedEvent");
+  //Serial.println("floorReachedEvent");
   if (areDoorsClosed){
     if (currentDirection) {
       if (currentFloor < MAX_FLOOR_INDEX) {
         currentFloor++;
-        Serial.println(currentFloor);
+        //Serial.println(currentFloor);
         EEPROM.write(1, currentFloor);
       } else {
         //llegue a planta alta
@@ -240,7 +234,7 @@ void floorReachedEvent() {
     } else {
       if (currentFloor > MIN_FLOOR_INDEX) {
         currentFloor--;
-        Serial.println(currentFloor);
+        //Serial.println(currentFloor);
         EEPROM.write(1, currentFloor);
       } else {
         //legue a planta baja

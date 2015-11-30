@@ -40,7 +40,16 @@ public class elevadorFrame extends JFrame {
 	private JPanel P4;
 	private JPanel P5;
 	
+	private JLabel estadoMotor;
 	
+	public JLabel getEstadoMotor() {
+		return estadoMotor;
+	}
+
+	public void setEstadoMotor(JLabel estadoMotor) {
+		this.estadoMotor = estadoMotor;
+	}
+
 	public JLabel getInteriorButton0() {
 		return interiorButton0;
 	}
@@ -438,6 +447,10 @@ public class elevadorFrame extends JFrame {
 		
 		JPanel panel_36 = new JPanel();
 		panel_13.add(panel_36);
+		
+		estadoMotor = new JLabel("");
+		estadoMotor.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/motorStop.png")));
+		panel_36.add(estadoMotor);
 		
 		JPanel panel_2 = new JPanel();
 		contentPane.add(panel_2);

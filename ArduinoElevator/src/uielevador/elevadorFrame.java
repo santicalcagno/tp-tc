@@ -19,13 +19,6 @@ public class elevadorFrame extends JFrame {
 
 	private JPanel contentPane;
 	JLabel estadoPuerta;
-	//pisos
-	private JPanel plantaBaja = new JPanel();
-	private JPanel piso4 = new JPanel();
-	private JPanel piso3 = new JPanel();
-	private JPanel piso2 = new JPanel();
-	private JPanel piso1 = new JPanel();
-	private JPanel piso5 = new JPanel();
 	// botones interiores
 	private JLabel interiorButton0;
 	private JLabel interiorButton1;
@@ -39,6 +32,14 @@ public class elevadorFrame extends JFrame {
 	private JLabel exteriorButton2;
 	private JLabel exteriorButton3;
 	private JLabel exteriorButton4;
+	//PISOS
+	private JPanel PB;
+	private JPanel P1;
+	private JPanel P2;
+	private JPanel P3;
+	private JPanel P4;
+	private JPanel P5;
+	
 	
 	public JLabel getInteriorButton0() {
 		return interiorButton0;
@@ -120,16 +121,60 @@ public class elevadorFrame extends JFrame {
 		this.exteriorButton3 = exteriorButton3;
 	}
 	
-	public JPanel getPlantaBaja() {
-		return plantaBaja;
-	}
+	
 	public JLabel getExteriorButton4() {
 		return exteriorButton4;
 	}
 
-	public void setPlantaBaja(JPanel plantaBaja) {
-		this.plantaBaja = plantaBaja;
+
+	public JPanel getPB() {
+		return PB;
 	}
+
+	public void setPB(JPanel pB) {
+		PB = pB;
+	}
+
+	public JPanel getP1() {
+		return P1;
+	}
+
+	public void setP1(JPanel p1) {
+		P1 = p1;
+	}
+
+	public JPanel getP2() {
+		return P2;
+	}
+
+	public void setP2(JPanel p2) {
+		P2 = p2;
+	}
+
+	public JPanel getP3() {
+		return P3;
+	}
+
+	public void setP3(JPanel p3) {
+		P3 = p3;
+	}
+
+	public JPanel getP4() {
+		return P4;
+	}
+
+	public void setP4(JPanel p4) {
+		P4 = p4;
+	}
+
+	public JPanel getP5() {
+		return P5;
+	}
+
+	public void setP5(JPanel p5) {
+		P5 = p5;
+	}
+
 	public void setExteriorButton4(JLabel exteriorButton4) {
 		this.exteriorButton4 = exteriorButton4;
 	}
@@ -305,20 +350,10 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_15 = new JPanel();
 		panel_3.add(panel_15);
 		
-		JPanel panel_17 = new JPanel();
-		panel_3.add(panel_17);
-		panel_17.setLayout(new GridLayout(3, 0, 0, 0));
-		
-		JPanel panel_16 = new JPanel();
-		panel_17.add(panel_16);
-		
-		//JPanel panel_62 = new JPanel();
-		piso5.setBackground(Color.GREEN);
-		piso5.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_17.add(piso5);
-		
-		JPanel panel_63 = new JPanel();
-		panel_17.add(panel_63);
+		P5 = new JPanel();
+		P5.setBackground(Color.BLACK);
+		panel_3.add(P5);
+		P5.setLayout(new GridLayout(3, 0, 0, 0));
 		
 		JPanel panel_5 = new JPanel();
 		panel_1.add(panel_5);
@@ -327,21 +362,12 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_22 = new JPanel();
 		panel_5.add(panel_22);
 		
-		JPanel panel_23 = new JPanel();
-		panel_23.setBorder(null);
-		panel_5.add(panel_23);
-		panel_23.setLayout(new GridLayout(3, 0, 0, 0));
-		
-		JPanel panel_64 = new JPanel();
-		panel_23.add(panel_64);
-		
-		//JPanel panel_65 = new JPanel();
-		piso4.setBackground(Color.GREEN);
-		piso4.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_23.add(piso4);
-		
-		JPanel panel_66 = new JPanel();
-		panel_23.add(panel_66);
+		P4 = new JPanel();
+		P4.setBackground(Color.BLACK);
+		P4.setForeground(new Color(0, 255, 255));
+		P4.setBorder(null);
+		panel_5.add(P4);
+		P4.setLayout(new GridLayout(3, 0, 0, 0));
 		
 		JPanel panel_24 = new JPanel();
 		panel_5.add(panel_24);
@@ -353,21 +379,11 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_25 = new JPanel();
 		panel_7.add(panel_25);
 		
-		JPanel panel_26 = new JPanel();
-		panel_26.setBorder(null);
-		panel_7.add(panel_26);
-		panel_26.setLayout(new GridLayout(3, 0, 0, 0));
-		
-		JPanel panel_67 = new JPanel();
-		panel_26.add(panel_67);
-		
-		//JPanel panel_68 = new JPanel();
-		piso3.setBackground(Color.GREEN);
-		piso3.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_26.add(piso3);
-		
-		JPanel panel_69 = new JPanel();
-		panel_26.add(panel_69);
+		P3 = new JPanel();
+		P3.setBackground(Color.BLACK);
+		P3.setBorder(null);
+		panel_7.add(P3);
+		P3.setLayout(new GridLayout(3, 0, 0, 0));
 		
 		JPanel panel_27 = new JPanel();
 		panel_7.add(panel_27);
@@ -379,21 +395,11 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_28 = new JPanel();
 		panel_9.add(panel_28);
 		
-		JPanel panel_29 = new JPanel();
-		panel_29.setBorder(null);
-		panel_9.add(panel_29);
-		panel_29.setLayout(new GridLayout(3, 0, 0, 0));
-		
-		JPanel panel_70 = new JPanel();
-		panel_29.add(panel_70);
-		
-		//JPanel panel_71 = new JPanel();
-		piso2.setBackground(Color.GREEN);
-		piso2.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_29.add(piso2);
-		
-		JPanel panel_72 = new JPanel();
-		panel_29.add(panel_72);
+		P2 = new JPanel();
+		P2.setBackground(Color.BLACK);
+		P2.setBorder(null);
+		panel_9.add(P2);
+		P2.setLayout(new GridLayout(3, 0, 0, 0));
 		
 		JPanel panel_30 = new JPanel();
 		panel_9.add(panel_30);
@@ -405,21 +411,11 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_31 = new JPanel();
 		panel_11.add(panel_31);
 		
-		JPanel panel_32 = new JPanel();
-		panel_32.setBorder(null);
-		panel_11.add(panel_32);
-		panel_32.setLayout(new GridLayout(3, 0, 0, 0));
-		
-		JPanel panel_73 = new JPanel();
-		panel_32.add(panel_73);
-		
-		//JPanel panel_74 = new JPanel();
-		piso1.setBackground(Color.GREEN);
-		piso1.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_32.add(piso1);
-		
-		JPanel panel_75 = new JPanel();
-		panel_32.add(panel_75);
+		P1 = new JPanel();
+		P1.setBackground(Color.BLACK);
+		P1.setBorder(null);
+		panel_11.add(P1);
+		P1.setLayout(new GridLayout(3, 0, 0, 0));
 		
 		
 		
@@ -434,21 +430,11 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_34 = new JPanel();
 		panel_13.add(panel_34);
 		
-		JPanel panel_35 = new JPanel();
-		panel_35.setBorder(null);
-		panel_13.add(panel_35);
-		panel_35.setLayout(new GridLayout(3, 0, 0, 0));
-		
-		JPanel panel_76 = new JPanel();
-		panel_35.add(panel_76);
-		
-		//JPanel panel_77 = new JPanel();
-		plantaBaja.setBorder(new LineBorder(new Color(0, 0, 0)));
-		plantaBaja.setBackground(Color.GREEN);
-		panel_35.add(plantaBaja);
-		
-		JPanel panel_78 = new JPanel();
-		panel_35.add(panel_78);
+		PB = new JPanel();
+		PB.setBackground(Color.ORANGE);
+		PB.setBorder(null);
+		panel_13.add(PB);
+		PB.setLayout(new GridLayout(3, 0, 0, 0));
 		
 		JPanel panel_36 = new JPanel();
 		panel_13.add(panel_36);
@@ -572,45 +558,7 @@ public class elevadorFrame extends JFrame {
 		this.estadoPuerta = estadoPuerta;
 	}
 
-	public JPanel getPiso4() {
-		return piso4;
-	}
-
-	public void setPiso4(JPanel piso4) {
-		this.piso4 = piso4;
-	}
-
-	public JPanel getPiso3() {
-		return piso3;
-	}
-
-	public void setPiso3(JPanel piso3) {
-		this.piso3 = piso3;
-	}
-
-	public JPanel getPiso2() {
-		return piso2;
-	}
-
-	public void setPiso2(JPanel piso2) {
-		this.piso2 = piso2;
-	}
-
-	public JPanel getPiso1() {
-		return piso1;
-	}
-
-	public void setPiso1(JPanel piso1) {
-		this.piso1 = piso1;
-	}
-
-	public JPanel getPiso5() {
-		return piso5;
-	}
-
-	public void setPiso5(JPanel piso5) {
-		this.piso5 = piso5;
-	}
+	
 
 	public JLabel getLabel_1() {
 		// TODO Auto-generated method stub

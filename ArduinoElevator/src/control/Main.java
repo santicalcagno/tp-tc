@@ -1,5 +1,6 @@
 package control;
 
+import java.awt.Color;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -33,10 +34,78 @@ public class Main {
 				case "MotorUp":
 					System.out.println("arriba");
 					el.subir();
+					try {
+						  Thread.sleep(1000);
+						} catch (InterruptedException ie) {
+						    //Handle exception
+						}
+					
+				switch (el.getPisoActual()) {
+				case 0: 
+					setAllBlack(uielevador);
+					uielevador.getPB().setBackground(Color.ORANGE);
+					break;
+				case 1: 
+					setAllBlack(uielevador);
+					uielevador.getP1().setBackground(Color.ORANGE);
+					break;
+				case 2: 
+					setAllBlack(uielevador);
+					uielevador.getP2().setBackground(Color.ORANGE);
+					break;
+				case 3: 
+					setAllBlack(uielevador);
+					uielevador.getP3().setBackground(Color.ORANGE);
+					break;
+				case 4: 
+					setAllBlack(uielevador);
+					uielevador.getP4().setBackground(Color.ORANGE);
+					break;
+				case 5: 
+					setAllBlack(uielevador);
+					uielevador.getP5().setBackground(Color.ORANGE);
+					break;
+					
+				}
+				
+				
 					break;
 				case "MotorDown":
 					System.out.println("abajo");
 					el.bajar();
+					try {
+						  Thread.sleep(1000);
+						} catch (InterruptedException ie) {
+						    //Handle exception
+						}
+					
+				switch (el.getPisoActual()) {
+				case 0: 
+					setAllBlack(uielevador);
+					uielevador.getPB().setBackground(Color.ORANGE);
+					break;
+				case 1: 
+					setAllBlack(uielevador);
+					uielevador.getP1().setBackground(Color.ORANGE);
+					break;
+				case 2: 
+					setAllBlack(uielevador);
+					uielevador.getP2().setBackground(Color.ORANGE);
+					break;
+				case 3: 
+					setAllBlack(uielevador);
+					uielevador.getP3().setBackground(Color.ORANGE);
+					break;
+				case 4: 
+					setAllBlack(uielevador);
+					uielevador.getP4().setBackground(Color.ORANGE);
+					break;
+				case 5: 
+					setAllBlack(uielevador);
+					uielevador.getP5().setBackground(Color.ORANGE);
+					break;
+					
+				}
 					
 					break;
 				case "DoorOpen":
@@ -137,6 +206,15 @@ public class Main {
 			in.close();
 		} catch (Exception e) { e.printStackTrace(); }
 		comPort.closePort();
+	}
+	
+	private static void setAllBlack(elevadorFrame uielevador){
+		uielevador.getPB().setBackground(Color.BLACK);
+		uielevador.getP1().setBackground(Color.BLACK);
+		uielevador.getP2().setBackground(Color.BLACK);
+		uielevador.getP3().setBackground(Color.BLACK);
+		uielevador.getP4().setBackground(Color.BLACK);
+		uielevador.getP5().setBackground(Color.BLACK);
 	}
 	
 	private static String readLine(InputStream in) throws IOException {

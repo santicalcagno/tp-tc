@@ -41,12 +41,12 @@ public class Main {
 				case "DoorOpen":
 					System.out.println("abrir puerta");
 					el.abrirPuerta();
-					uielevador.getLblNewLabel_3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/abierto.png")));
+				//	uielevador.getLblNewLabel_3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/abierto.png")));
 					break;
 				case "DoorClose":
 					System.out.println("cerrar puerta");
 					el.cerrarPuerta();
-					uielevador.getLblNewLabel_3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/cerrado.png")));
+					//uielevador.getLblNewLabel_3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/cerrado.png")));
 					break;
 				case "e0":
 					break;

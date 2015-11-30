@@ -27,7 +27,101 @@ import javax.swing.JLayeredPane;
 public class elevadorFrame extends JFrame {
 
 	private JPanel contentPane;
-	private JLabel lblNewLabel_3 = new JLabel("");
+	
+	
+	// botones interiores
+	private JLabel interiorButton0;
+	private JLabel interiorButton1;
+	private JLabel interiorButton2;
+	private JLabel interiorButton3;
+	private JLabel interiorButton4;
+	private JLabel interiorButton5;
+	// botones exteriores
+	private JLabel exteriorButton0;
+	private JLabel exteriorButton1;
+	private JLabel exteriorButton2;
+	private JLabel exteriorButton3;
+	private JLabel exteriorButton4;
+	
+	public JLabel getInteriorButton0() {
+		return interiorButton0;
+	}
+
+	public void setInteriorButton0(JLabel interiorButton0) {
+		this.interiorButton0 = interiorButton0;
+	}
+
+	public JLabel getInteriorButton1() {
+		return interiorButton1;
+	}
+
+	public void setInteriorButton1(JLabel interiorButton1) {
+		this.interiorButton1 = interiorButton1;
+	}
+
+	public JLabel getInteriorButton2() {
+		return interiorButton2;
+	}
+
+	public void setInteriorButton2(JLabel interiorButton2) {
+		this.interiorButton2 = interiorButton2;
+	}
+
+	public JLabel getInteriorButton3() {
+		return interiorButton3;
+	}
+
+	public void setInteriorButton3(JLabel interiorButton3) {
+		this.interiorButton3 = interiorButton3;
+	}
+
+	public JLabel getInteriorButton4() {
+		return interiorButton4;
+	}
+
+	public void setInteriorButton4(JLabel interiorButton4) {
+		this.interiorButton4 = interiorButton4;
+	}
+
+	public JLabel getInteriorButton5() {
+		return interiorButton5;
+	}
+
+	public void setInteriorButton5(JLabel interiorButton5) {
+		this.interiorButton5 = interiorButton5;
+	}
+
+	public JLabel getExteriorButton0() {
+		return exteriorButton0;
+	}
+
+	public void setExteriorButton0(JLabel exteriorButton0) {
+		this.exteriorButton0 = exteriorButton0;
+	}
+
+	public JLabel getExteriorButton1() {
+		return exteriorButton1;
+	}
+
+	public void setExteriorButton1(JLabel exteriorButton1) {
+		this.exteriorButton1 = exteriorButton1;
+	}
+
+	public JLabel getExteriorButton2() {
+		return exteriorButton2;
+	}
+
+	public void setExteriorButton2(JLabel exteriorButton2) {
+		this.exteriorButton2 = exteriorButton2;
+	}
+
+	public JLabel getExteriorButton3() {
+		return exteriorButton3;
+	}
+
+	public void setExteriorButton3(JLabel exteriorButton3) {
+		this.exteriorButton3 = exteriorButton3;
+	}
 	private JPanel plantaBaja = new JPanel();
 	private JPanel piso4 = new JPanel();
 	private JPanel piso3 = new JPanel();
@@ -38,18 +132,32 @@ public class elevadorFrame extends JFrame {
 	public JPanel getPlantaBaja() {
 		return plantaBaja;
 	}
+	public JLabel getExteriorButton4() {
+		return exteriorButton4;
+	}
 
 	public void setPlantaBaja(JPanel plantaBaja) {
 		this.plantaBaja = plantaBaja;
 	}
-
-	public JLabel getLblNewLabel_3() {
-		return lblNewLabel_3;
+	public void setExteriorButton4(JLabel exteriorButton4) {
+		this.exteriorButton4 = exteriorButton4;
 	}
 
-	public void setLblNewLabel_3(JLabel lblNewLabel_3) {
-		this.lblNewLabel_3 = lblNewLabel_3;
+	public JLabel getExteriorButton5() {
+		return exteriorButton5;
 	}
+
+	public void setExteriorButton5(JLabel exteriorButton5) {
+		this.exteriorButton5 = exteriorButton5;
+	}
+
+	private JLabel exteriorButton5;
+	
+	
+	
+
+	
+
 
 	/**
 	 * Launch the application.
@@ -99,6 +207,11 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_46 = new JPanel();
 		panel_4.add(panel_46);
 		
+		exteriorButton5 = new JLabel("");
+		exteriorButton5.setHorizontalAlignment(SwingConstants.CENTER);
+		exteriorButton5.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_46.add(exteriorButton5);
+		
 		JPanel panel_6 = new JPanel();
 		panel_6.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel.add(panel_6);
@@ -112,6 +225,10 @@ public class elevadorFrame extends JFrame {
 		
 		JPanel panel_49 = new JPanel();
 		panel_6.add(panel_49);
+		
+		exteriorButton4 = new JLabel("");
+		exteriorButton4.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_49.add(exteriorButton4);
 		
 		JPanel panel_8 = new JPanel();
 		panel_8.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -127,6 +244,10 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_52 = new JPanel();
 		panel_8.add(panel_52);
 		
+		exteriorButton3 = new JLabel("");
+		exteriorButton3.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_52.add(exteriorButton3);
+		
 		JPanel panel_10 = new JPanel();
 		panel_10.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel.add(panel_10);
@@ -140,6 +261,10 @@ public class elevadorFrame extends JFrame {
 		
 		JPanel panel_55 = new JPanel();
 		panel_10.add(panel_55);
+		
+		exteriorButton2 = new JLabel("");
+		exteriorButton2.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_55.add(exteriorButton2);
 		
 		JPanel panel_12 = new JPanel();
 		panel_12.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -155,6 +280,10 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_58 = new JPanel();
 		panel_12.add(panel_58);
 		
+		exteriorButton1 = new JLabel("");
+		exteriorButton1.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_58.add(exteriorButton1);
+		
 		JPanel panel_14 = new JPanel();
 		panel_14.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel.add(panel_14);
@@ -168,6 +297,10 @@ public class elevadorFrame extends JFrame {
 		
 		JPanel panel_61 = new JPanel();
 		panel_14.add(panel_61);
+		
+		exteriorButton0 = new JLabel("");
+		exteriorButton0.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_61.add(exteriorButton0);
 		
 		JPanel panel_1 = new JPanel();
 		contentPane.add(panel_1);
@@ -344,27 +477,27 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_21 = new JPanel();
 		panel_19.add(panel_21);
 		
-		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
-		panel_21.add(lblNewLabel_4);
+		interiorButton5 = new JLabel("");
+		interiorButton5.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_21.add(interiorButton5);
 		
 		JPanel panel_39 = new JPanel();
 		panel_19.add(panel_39);
 		
-		JLabel lblPiso_2 = new JLabel("PISO 1");
+		JLabel lblPiso_2 = new JLabel("PISO 5");
 		panel_39.add(lblPiso_2);
 		
 		JPanel panel_40 = new JPanel();
 		panel_19.add(panel_40);
 		
-		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
-		panel_40.add(label);
+		interiorButton4 = new JLabel("");
+		interiorButton4.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_40.add(interiorButton4);
 		
 		JPanel panel_41 = new JPanel();
 		panel_19.add(panel_41);
 		
-		JLabel lblPiso_3 = new JLabel("PISO 2");
+		JLabel lblPiso_3 = new JLabel("PISO 4");
 		panel_41.add(lblPiso_3);
 		
 		
@@ -375,9 +508,9 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_42 = new JPanel();
 		panel_37.add(panel_42);
 		
-		JLabel label_1 = new JLabel("");
-		label_1.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
-		panel_42.add(label_1);
+		interiorButton3 = new JLabel("");
+		interiorButton3.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_42.add(interiorButton3);
 		
 		JPanel panel_43 = new JPanel();
 		panel_37.add(panel_43);
@@ -388,14 +521,14 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_44 = new JPanel();
 		panel_37.add(panel_44);
 		
-		JLabel label_2 = new JLabel("");
-		label_2.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
-		panel_44.add(label_2);
+		interiorButton2 = new JLabel("");
+		interiorButton2.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_44.add(interiorButton2);
 		
 		JPanel panel_47 = new JPanel();
 		panel_37.add(panel_47);
 		
-		JLabel lblPiso_5 = new JLabel("PISO 4");
+		JLabel lblPiso_5 = new JLabel("PISO 2");
 		panel_47.add(lblPiso_5);
 		
 		JPanel panel_38 = new JPanel();
@@ -405,22 +538,22 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_50 = new JPanel();
 		panel_38.add(panel_50);
 		
-		JLabel label_3 = new JLabel("");
-		label_3.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
-		panel_50.add(label_3);
+		interiorButton1 = new JLabel("");
+		interiorButton1.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_50.add(interiorButton1);
 		
 		JPanel panel_53 = new JPanel();
 		panel_38.add(panel_53);
 		
-		JLabel lblPiso_6 = new JLabel("PISO 5");
+		JLabel lblPiso_6 = new JLabel("PISO 1");
 		panel_53.add(lblPiso_6);
 		
 		JPanel panel_56 = new JPanel();
 		panel_38.add(panel_56);
 		
-		JLabel label_4 = new JLabel("");
-		label_4.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
-		panel_56.add(label_4);
+		interiorButton0 = new JLabel("");
+		interiorButton0.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+		panel_56.add(interiorButton0);
 		
 		JPanel panel_59 = new JPanel();
 		panel_38.add(panel_59);
@@ -480,6 +613,7 @@ public class elevadorFrame extends JFrame {
 	public JLabel getLabel_1() {
 		// TODO Auto-generated method stub
 		return null;
+				
 	}
 
 	

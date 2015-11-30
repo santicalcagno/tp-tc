@@ -158,7 +158,7 @@ void doorClose() {
   }        
 }
 
-//Returns true if a button press is detected
+//Devuelve true si se presiona un boton
 boolean buttonPressDetected () {
   return (readExteriorButtonStates ()
     || readInteriorButtonStates ());
@@ -203,8 +203,8 @@ boolean readInteriorButtonStates() {
 }
 
 /**
-  Returns true if an interior button selection for the floor at index specified was made or an 
-  exterior button that is in the same direction as the current floors direction has been selected.
+  Devuelve true si tiene que parar en el piso,
+  o sea, si se apreto un boton de adentro o afuera
 */
 boolean shouldStopAtFloor (int floorIndex) {
   if (interiorSelected[floorIndex] || exteriorSelected[floorIndex]) {
@@ -223,9 +223,7 @@ boolean hasReachedFloor() {
 }
 
 /**
-    Increments or decrements floorReached variable depending on direction of the elevator
-    Ensures that the floor is marked as visited by deactivating its floor visited commands
-    Returns false if the elevator is at the top or bottomFloor
+    Aumenta o decrementa currentFloor en función de la trayectoria
 */
 void floorReachedEvent() {
   Serial.println("floorReachedEvent");

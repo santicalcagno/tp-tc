@@ -50,38 +50,82 @@ public class Main {
 					uielevador.getEstadoPuerta().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/cerrado.png")));
 					break;
 				case "e0":
+					System.out.println("e0");
+					uielevador.getExteriorButton0().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
 					break;
 				case "e1":
+					System.out.println("e1");
+					uielevador.getExteriorButton1().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
 					break;
 				case "e2":
+					System.out.println("e2");
+					uielevador.getExteriorButton2().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
 					break;
 				case "e3":
+					System.out.println("e3");
+					uielevador.getExteriorButton3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
 					break;
 				case "e4":
+					System.out.println("e4");
+					uielevador.getExteriorButton4().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
 					break;
-				case "e5":
+				case "e5":					
+					System.out.println("e5");
+					uielevador.getExteriorButton5().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
 					break;
 				case "i0":
+					System.out.println("i0");
+					uielevador.getInteriorButton0().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
 					break;
 				case "i1":
+					System.out.println("i1");
+					uielevador.getInteriorButton1().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
 					break;
 				case "i2":
+					System.out.println("i2");
+					uielevador.getInteriorButton2().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
 					break;
 				case "i3":
+					System.out.println("i3");
+					uielevador.getInteriorButton3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
 					break;
 				case "i4":
+					System.out.println("i4");
+					uielevador.getInteriorButton4().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
+					break;
+				case "i5":
+					System.out.println("i5");
+					uielevador.getInteriorButton5().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonPrendido.png")));
 					break;
 				case "v0":
+					System.out.println("v0");
+					uielevador.getInteriorButton0().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+					uielevador.getExteriorButton0().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
 					break;
 				case "v1":
+					System.out.println("v1");
+					uielevador.getInteriorButton1().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+					uielevador.getExteriorButton1().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
 					break;
 				case "v2":
+					System.out.println("v2");
+					uielevador.getInteriorButton2().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+					uielevador.getExteriorButton2().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
 					break;
 				case "v3":
+					System.out.println("v3");
+					uielevador.getInteriorButton3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+					uielevador.getExteriorButton3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
 					break;
 				case "v4":
+					System.out.println("v4");
+					uielevador.getInteriorButton4().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+					uielevador.getExteriorButton4().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
 					break;
 				case "v5":
+					System.out.println("v5");
+					uielevador.getInteriorButton5().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
+					uielevador.getExteriorButton5().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/botonApagado.png")));
 					break;
 					
 					

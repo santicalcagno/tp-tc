@@ -1,34 +1,31 @@
 package uielevador;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
+
 
 import javax.swing.JLabel;
 import java.awt.GridLayout;
-import javax.swing.BoxLayout;
+
 import javax.swing.ImageIcon;
-import javax.swing.JSplitPane;
-import java.awt.Canvas;
-import java.awt.Panel;
 import javax.swing.SwingConstants;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.BevelBorder;
 import javax.swing.border.LineBorder;
-import javax.swing.JLayeredPane;
 
 public class elevadorFrame extends JFrame {
 
 	private JPanel contentPane;
-	
-	
+	JLabel estadoPuerta;
+	//pisos
+	private JPanel plantaBaja = new JPanel();
+	private JPanel piso4 = new JPanel();
+	private JPanel piso3 = new JPanel();
+	private JPanel piso2 = new JPanel();
+	private JPanel piso1 = new JPanel();
+	private JPanel piso5 = new JPanel();
 	// botones interiores
 	private JLabel interiorButton0;
 	private JLabel interiorButton1;
@@ -122,13 +119,7 @@ public class elevadorFrame extends JFrame {
 	public void setExteriorButton3(JLabel exteriorButton3) {
 		this.exteriorButton3 = exteriorButton3;
 	}
-	private JPanel plantaBaja = new JPanel();
-	private JPanel piso4 = new JPanel();
-	private JPanel piso3 = new JPanel();
-	private JPanel piso2 = new JPanel();
-	private JPanel piso1 = new JPanel();
-	private JPanel piso5 = new JPanel();
-
+	
 	public JPanel getPlantaBaja() {
 		return plantaBaja;
 	}
@@ -564,10 +555,21 @@ public class elevadorFrame extends JFrame {
 		JPanel panel_20 = new JPanel();
 		panel_2.add(panel_20);
 		
+		estadoPuerta = new JLabel("");
+		estadoPuerta.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/cerrado.png")));
+		panel_20.add(estadoPuerta);
 		
-		lblNewLabel_3.setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/cerrado.png")));
-		panel_20.add(lblNewLabel_3);
 		
+		
+
+
+		
+	}
+
+	
+
+	public void setEstadoPuerta(JLabel estadoPuerta) {
+		this.estadoPuerta = estadoPuerta;
 	}
 
 	public JPanel getPiso4() {
@@ -614,6 +616,11 @@ public class elevadorFrame extends JFrame {
 		// TODO Auto-generated method stub
 		return null;
 				
+	}
+
+	public JLabel getEstadoPuerta() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

@@ -20,6 +20,7 @@ public class Main {
 		comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 100, 0);
 		InputStream in = comPort.getInputStream();
 		elevadorFrame uielevador = new elevadorFrame();
+		uielevador.setVisible(true);
 		elevador el = new elevador(0,"cerrado");
 		
 		
@@ -41,12 +42,12 @@ public class Main {
 				case "DoorOpen":
 					System.out.println("abrir puerta");
 					el.abrirPuerta();
-				//	uielevador.getLblNewLabel_3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/abierto.png")));
+					uielevador.getEstadoPuerta().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/abierto.png")));
 					break;
 				case "DoorClose":
 					System.out.println("cerrar puerta");
 					el.cerrarPuerta();
-					//uielevador.getLblNewLabel_3().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/cerrado.png")));
+					uielevador.getEstadoPuerta().setIcon(new ImageIcon(elevadorFrame.class.getResource("/uielevador/cerrado.png")));
 					break;
 				case "e0":
 					break;

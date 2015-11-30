@@ -620,7 +620,7 @@ public class elevadorFrame extends JFrame {
 
 	public JLabel getEstadoPuerta() {
 		// TODO Auto-generated method stub
-		return null;
+		return estadoPuerta;
 	}
 
 	

@@ -83,6 +83,7 @@ void changeDirection () {
 void returnToGround(){
   currentFloor = EEPROM.read(1);
   if (currentFloor != 0) {
+    doorClose();
     for (int i = 0; i < EEPROM.read(1); ++i)
     {
       motorDown();
